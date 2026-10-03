@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #fff8fb, #e8f4ff);
+    color: #5b4650;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD */
+.card {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 35px;
+    padding: 45px;
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px rgba(160, 90, 120, 0.20),
+        0 5px 15px rgba(0, 0, 0, 0.05);
+
+    border: 2px solid #ffd4e3;
+    position: relative;
+    overflow: hidden;
+}
+
+/* DECORATION */
+.card::before {
+    content: "🌸";
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    font-size: 35px;
+    opacity: 0.7;
+}
+
+.card::after {
+    content: "🌺";
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    font-size: 35px;
+    opacity: 0.7;
+}
+
+/* TOP EMOJIS */
+.top-emojis {
+    font-size: 32px;
+    letter-spacing: 10px;
+    margin-bottom: 15px;
+}
+
+/* TITLE */
+h1 {
+    font-family: Georgia, serif;
+    font-size: 50px;
+    color: #d65380;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0 #ffe0eb;
+}
+
+h2 {
+    color: #8c6175;
+    font-size: 23px;
+    margin-bottom: 25px;
+}
+
+/* TEACHER IMAGE */
+.teacher-img {
+    width: 250px;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 9px solid white;
+    outline: 5px solid #ffd3e2;
+
+    box-shadow:
+        0 12px 30px rgba(190, 90, 130, 0.30);
+
+    display: block;
+    margin: 20px auto 35px;
+
+    transition: 0.4s ease;
+}
+
+.teacher-img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* MESSAGE BOX */
+.message {
+    background: linear-gradient(
+        135deg,
+        #fff1f6,
+        #fff8fb
+    );
+
+    border-radius: 25px;
+
+    padding: 30px;
+
+    text-align: left;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+
+    border: 1px solid #ffd7e5;
+
+    box-shadow:
+        inset 0 0 20px rgba(255, 190, 210, 0.15);
+}
+
+.message p {
+    margin-bottom: 18px;
+}
+
+.message p:first-child {
+    color: #d65380;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.message strong {
+    display: block;
+
+    text-align: center;
+
+    color: #d65380;
+
+    font-size: 20px;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    border: 1px dashed #ed9bb8;
+}
+
+/* BUTTON */
+button {
+    border: none;
+
+    background: linear-gradient(
+        135deg,
+        #ed6d9a,
+        #d94f7c
+    );
+
+    color: white;
+
+    padding: 16px 35px;
+
+    border-radius: 50px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(217, 79, 124, 0.30);
+
+    transition: all 0.3s ease;
+
+    margin: 5px 0 15px;
+}
+
+button:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 25px rgba(217, 79, 124, 0.40);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* BUTTON MESSAGE */
+#thankYouMessage {
+    color: #d65380;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    min-height: 28px;
+
+    margin-bottom: 25px;
+}
+
+/* MUSIC SECTION */
+.music {
+    margin-top: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f6,
+            #f0f7ff
+        );
+
+    padding: 30px;
+
+    border-radius: 28px;
+
+    border: 2px solid #ffd6e5;
+
+    box-shadow:
+        0 8px 20px rgba(140, 100, 120, 0.10);
+}
+
+.music h2 {
+    color: #c9547e;
+
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+.music > p {
+    color: #74576a;
+
+    margin-bottom: 20px;
+}
+
+/* MUSIC PLAYER */
+.music-player {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 18px rgba(120, 80, 100, 0.12);
+
+    text-align: left;
+}
+
+/* MUSIC ICON */
+.music-icon {
+    width: 65px;
+    height: 65px;
+
+    min-width: 65px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd1e2,
+            #ffe9f1
+        );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 30px;
+
+    box-shadow:
+        0 5px 12px rgba(200, 100, 140, 0.18);
+}
+
+/* SONG INFO */
+.song-info {
+    flex: 1;
+}
+
+.song-info h3 {
+    color: #c44f78;
+
+    font-size: 19px;
+
+    margin-bottom: 5px;
+}
+
+.song-info p {
+    color: #806273;
+
+    font-size: 14px;
+}
+
+/* AUDIO */
+audio {
+    width: 270px;
+
+    max-width: 100%;
+}
+
+/* BOTTOM EMOJIS */
+.bottom-emojis {
+    font-size: 30px;
+
+    letter-spacing: 8px;
+
+    margin: 30px 0 20px;
+}
+
+/* FOOTER */
+footer {
+    border-top: 1px solid #f1d6e1;
+
+    padding-top: 20px;
+
+    color: #9a7184;
+
+    font-size: 14px;
+}
+
+/* FLOATING DECORATION */
+.card .top-emojis::after {
+    content: "✨";
+
+    display: inline-block;
+
+    margin-left: 15px;
+
+    animation: sparkle 1.5s infinite;
+}
+
+@keyframes sparkle {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    .card {
+        padding: 30px 18px;
+
+        border-radius: 25px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    .teacher-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .message {
+        padding: 22px;
+
+        font-size: 14px;
+    }
+
+    .music-player {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .song-info {
+        text-align: center;
+    }
+
+    audio {
+        width: 100%;
+    }
+
+    .bottom-emojis {
+        font-size: 23px;
+
+        letter-spacing: 4px;
+    }
+
+}
+
+/* SMALL PHONE */
+@media (max-width: 420px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .top-emojis {
+        font-size: 24px;
+
+        letter-spacing: 5px;
+    }
+
+    .teacher-img {
+        width: 170px;
+        height: 170px;
+    }
+
+    button {
+        width: 100%;
+
+        font-size: 15px;
+    }
+
+}
